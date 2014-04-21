@@ -1,0 +1,7 @@
+nginx conf:
+1 root: /***/web/
+
+2 rewrite ^/([a-z-A-Z]+)/([a-z-A-Z]+)/?(.*)$ /index.php?m=$1-$2&$3;
+  rewrite ^/([a-z-A-Z]+)/?(.*)$ /index.php?m=$1&$2;
+
+3 访问http://servername/test/get或者http://servername/index.php?m=test-get
