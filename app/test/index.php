@@ -1,5 +1,6 @@
 <?php
 class App extends AppBase {
+    public $checkLogin = false;
     public function run() {
         
 

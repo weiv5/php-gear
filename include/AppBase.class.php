@@ -2,6 +2,7 @@
 abstract class AppBase {
     private $_output = array();
     private $_tpl;
+    public $checkLogin = true;
 
     abstract public function run();
 

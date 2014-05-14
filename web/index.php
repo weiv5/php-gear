@@ -24,6 +24,10 @@ try {
     $route_path = $router->parseAction(GET::str("m", "index"));
     require_once($route_path);
     $app = new App();
+    if ($app->checkLogin) {
+        //check if login
+        exit;
+    }
     $app->run();
 } catch (Exception $e) {
     exit($e->getMessage());
